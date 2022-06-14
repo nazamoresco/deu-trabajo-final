@@ -3,15 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Map extends StatelessWidget {
+class LaPlataMap extends StatelessWidget {
   final Completer<GoogleMapController> controller = Completer();
 
   static const CameraPosition initialPosition = CameraPosition(
     target: LatLng(-34.920252, -57.950477),
-    zoom: 10,
+    zoom: 15,
   );
 
-  Map({ Key? key }) : super(key: key);
+  LaPlataMap({ Key? key }) : super(key: key);
 
 
   @override

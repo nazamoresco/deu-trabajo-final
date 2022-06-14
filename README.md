@@ -12,3 +12,4 @@
 * Web renderers: https://docs.flutter.dev/development/platform-integration/web/renderers
 * Doc de accesibilidad: https://docs.flutter.dev/development/accessibility-and-localization/accessibility
 
+flutter run -d chrome --web-renderer html
