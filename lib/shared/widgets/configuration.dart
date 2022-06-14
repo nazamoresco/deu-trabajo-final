@@ -9,7 +9,8 @@ class Configuration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ConfigurationProvider>(
-      builder: (context, ConfigurationProvider provider, _) => Column(
+        builder: (context, ConfigurationProvider provider, _) {
+      return Column(
         children: [
           TextSizeInput(
             label: "texto",
@@ -30,7 +31,7 @@ class Configuration extends StatelessWidget {
             increase: provider.increaseTitleSize,
           ),
         ],
-      ),
-    );
+      );
+    });
   }
 }

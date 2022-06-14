@@ -7,6 +7,13 @@ class ConfigurationProvider extends ChangeNotifier {
 
   final Color textColor = Colors.lightBlue[400]!;
 
+  bool helpEnabled = true;
+
+  set toggleHelp(bool help) {
+    helpEnabled = help;
+    notifyListeners();
+  }
+
   void decreaseTextSize() {
     textSize -= 1;
     notifyListeners();

@@ -53,6 +53,7 @@ class MapSidebar extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
+                    if (provider.helpEnabled) displayHelp(context, provider);
                     Navigator.of(context).pushNamed("/configuracion");
                   },
                   icon: Icon(
@@ -70,5 +71,29 @@ class MapSidebar extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void displayHelp(context, provider) {
+    final snackBar = SnackBar(
+      backgroundColor: Colors.lightBlue[50],
+      padding: const EdgeInsets.all(8.0),
+      content: Row(
+        children: [
+          Icon(
+            Icons.help_outline,
+            color: provider.textColor,
+          ),
+          Text(
+            'En esta pagina se puede configurar distintas propiedades de la aplicacion, como tamaño de fuente, contraste, etc!',
+            style: TextStyle(
+              color: provider.textColor,
+              fontSize: provider.textSize,
+            ),
+          )
+        ],
+      ),
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }
