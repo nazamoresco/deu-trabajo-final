@@ -19,7 +19,7 @@ class ConfigurationScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: Configuration(),
+        body: const Configuration(),
       ),
     );
   }

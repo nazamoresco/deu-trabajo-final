@@ -12,6 +12,7 @@ class MapSidebar extends StatelessWidget {
       builder: (context, provider, _) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 25),
           ListTile(
             leading: const Icon(Icons.water_drop_outlined, size: 64),
             iconColor: provider.textColor,
@@ -61,6 +62,19 @@ class MapSidebar extends StatelessWidget {
                     color: provider.textColor,
                   ),
                 ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 16, left: 16),
+            child: Configuration(),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 16, left: 16, top: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
                 Text(
                   "Ayuda",
                   style: TextStyle(
@@ -79,11 +93,7 @@ class MapSidebar extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16, left: 16),
-            child: Configuration(),
-          ),
+          )
         ],
       ),
     );
@@ -92,21 +102,24 @@ class MapSidebar extends StatelessWidget {
   void displayHelp(context, provider) {
     final snackBar = SnackBar(
       backgroundColor: Colors.lightBlue[50],
-      padding: const EdgeInsets.all(8.0),
-      content: Row(
-        children: [
-          Icon(
-            Icons.help_outline,
-            color: provider.textColor,
-          ),
-          Text(
-            'En esta pagina se puede configurar distintas propiedades de la aplicacion, como tamaño de fuente, contraste, etc!',
-            style: TextStyle(
+      padding: const EdgeInsets.all(16.0),
+      content: Container(
+        height: 200.0,
+        child: Row(
+          children: [
+            Icon(
+              Icons.help_outline,
               color: provider.textColor,
-              fontSize: provider.textSize,
             ),
-          )
-        ],
+            Text(
+              'En esta pagina se puede configurar distintas propiedades de la aplicacion, como tamaño de fuente, contraste, etc!',
+              style: TextStyle(
+                color: provider.textColor,
+                fontSize: provider.textSize,
+              ),
+            )
+          ],
+        ),
       ),
     );
 

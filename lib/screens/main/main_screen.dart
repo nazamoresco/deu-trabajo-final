@@ -27,28 +27,31 @@ class MainScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: PropertyDisplayToggle(
+                onPressed: () {},
                 icon: Icons.waves_outlined,
                 label: "Cauces",
                 textColor: Colors.red,
-                backgroundColor: Colors.lightBlue[200]!,
+                enabled: false,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: PropertyDisplayToggle(
+                onPressed: provider.toggleWitnesses,
                 icon: Icons.campaign_outlined,
                 label: "Testigos",
                 textColor: Colors.blue[800]!,
-                backgroundColor: Colors.lightBlue[200]!,
+                enabled: provider.showWitness,
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: PropertyDisplayToggle(
+                onPressed: provider.toggleNews,
                 icon: Icons.newspaper_outlined,
                 label: "Noticias",
                 textColor: Colors.black,
-                backgroundColor: Colors.lightBlue[200]!,
+                enabled: provider.showNews,
               ),
             ),
           ],

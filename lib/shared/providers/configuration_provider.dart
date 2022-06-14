@@ -9,10 +9,9 @@ class ConfigurationProvider extends ChangeNotifier {
 
   bool helpEnabled = true;
 
-  set toggleHelp(bool help) {
-    helpEnabled = help;
-    notifyListeners();
-  }
+  bool showWitness = true;
+  bool showNews = true;
+
 
   void decreaseTextSize() {
     textSize -= 1;
@@ -41,6 +40,16 @@ class ConfigurationProvider extends ChangeNotifier {
 
   void increaseTitleSize() {
     titleSize += 1;
+    notifyListeners();
+  }
+
+  void toggleWitnesses() {
+    showWitness = !showWitness;
+    notifyListeners();
+  }
+
+  void toggleNews() {
+    showNews = !showNews;
     notifyListeners();
   }
 }

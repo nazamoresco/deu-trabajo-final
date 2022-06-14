@@ -8,6 +8,8 @@
    1. Falta una pantalla con titulo/nombre de la aplicacion y una explicacion para que sirve.
 4. Menu que explique como se usa.
 5. Proveer links de interes
+6. Agregar una lista con los punto de interes abajo.
+7. Chequear contraste de colores de texto.
 
 # Links de interes sobre accesibilidad
 

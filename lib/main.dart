@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.lightBlue[50],
             ),
           ),
-          initialRoute: "/principal",
+          initialRoute: "/initial",
           routes: {
             "/principal": (context) => const MainScreen(),
             "/configuracion": (context) => const ConfigurationScreen(),
