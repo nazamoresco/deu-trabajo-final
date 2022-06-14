@@ -1,16 +1,14 @@
-# deu
+# TODO
 
-A new Flutter project.
+1. Restringir el mapa a la zona de la plata
+   1. https://developers.google.com/maps/documentation/javascript/examples/control-bounds-restriction
+2. Agregar al Readme instrucciones de como instalar el proyecto.
+   1. Tal vez agregar una version ya compilada tambien.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Links de interes sobre accesibilidad
 
-A few resources to get you started if this is your first Flutter project:
+* Semantics widget: https://api.flutter.dev/flutter/widgets/Semantics-class.html
+* Web renderers: https://docs.flutter.dev/development/platform-integration/web/renderers
+* Doc de accesibilidad: https://docs.flutter.dev/development/accessibility-and-localization/accessibility
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

@@ -1,3 +1,4 @@
+import 'package:deu/screens/main/widgets/map.dart';
 import 'package:deu/screens/main/widgets/property_display_toggle.dart';
 import 'package:flutter/material.dart';
 
@@ -42,6 +43,7 @@ class MainScreen extends StatelessWidget {
           ),
         ],
       ),
+      body: Map(),
     );
   }
 }
