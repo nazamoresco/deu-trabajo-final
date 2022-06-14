@@ -60,7 +60,23 @@ class MapSidebar extends StatelessWidget {
                     Icons.settings,
                     color: provider.textColor,
                   ),
-                )
+                ),
+                Text(
+                  "Ayuda",
+                  style: TextStyle(
+                    fontSize: provider.subtitleSize,
+                    color: provider.textColor,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("/initial");
+                  },
+                  icon: Icon(
+                    Icons.help,
+                    color: provider.textColor,
+                  ),
+                ),
               ],
             ),
           ),

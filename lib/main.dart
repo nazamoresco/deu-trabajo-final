@@ -1,4 +1,5 @@
 import 'package:deu/screens/configuration/configuration_screen.dart';
+import 'package:deu/screens/initial/initial_screen.dart';
 import 'package:deu/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
           initialRoute: "/principal",
           routes: {
             "/principal": (context) => const MainScreen(),
-            "/configuracion": (context) => const ConfigurationScreen()
+            "/configuracion": (context) => const ConfigurationScreen(),
+            "/initial":(context) => const InitialScreen(),
           },
         ),
       ),
