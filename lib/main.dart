@@ -1,6 +1,8 @@
 import 'package:deu/screens/configuration/configuration_screen.dart';
 import 'package:deu/screens/initial/initial_screen.dart';
 import 'package:deu/screens/main/main_screen.dart';
+import 'package:deu/shared/providers/map_selected_marker_provider.dart';
+import 'package:deu/shared/providers/markers_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
@@ -17,8 +19,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ConfigurationProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ConfigurationProvider()),
+        ChangeNotifierProvider(
+          create: (context) => MapSelectedMarkerProvider(),
+        ),
+        ChangeNotifierProvider(create: (context) => MapItemsProvider()),
+      ],
       child: Consumer<ConfigurationProvider>(
         builder: (context, provider, _) => MaterialApp(
           title: 'Mapa de Testimonios',
@@ -32,7 +40,7 @@ class MyApp extends StatelessWidget {
           routes: {
             "/principal": (context) => const MainScreen(),
             "/configuracion": (context) => const ConfigurationScreen(),
-            "/initial":(context) => const InitialScreen(),
+            "/initial": (context) => const InitialScreen(),
           },
         ),
       ),

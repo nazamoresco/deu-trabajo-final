@@ -1,7 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:deu/screens/main/classes/map_configuration.dart';
+import 'package:deu/shared/classes/map_item.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
+import 'package:deu/shared/providers/map_selected_marker_provider.dart';
+import 'package:deu/shared/providers/markers_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
@@ -14,120 +18,41 @@ class LaPlataMap extends StatelessWidget {
     zoom: 15,
   );
 
-  final Set<Marker> witnessMarkers = [
-    Marker(
-        markerId: MarkerId("testimonio_1"),
-        position: LatLng(-34.920252, -57.950477),
-        icon: BitmapDescriptor.defaultMarkerWithHue(
-          BitmapDescriptor.hueOrange,
-        ),
-        onTap: () {
-          log("Mostrar modal");
-        }
-        // icon
-        ),
-  ].toSet();
-
-  final Set<Marker> newsMarkers = [
-    Marker(
-        markerId: MarkerId("testimonio_2"),
-        position: LatLng(-34.910152, -57.950477),
-        icon: BitmapDescriptor.defaultMarkerWithHue(
-          BitmapDescriptor.hueYellow,
-        ),
-        onTap: () {
-          log("Mostrar news");
-        }
-        // icon
-        ),
-  ].toSet();
-
-  Set<Marker> markers(ConfigurationProvider provider) {
-    // return witnessMarkers;
-    return [
-      if (provider.showNews) ...newsMarkers,
-      if (provider.showWitness) ...witnessMarkers,
-    ].toSet();
-  }
-
   LaPlataMap({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ConfigurationProvider>(
-      builder: (context, provider, _) => GoogleMap(
+    return Consumer<ConfigurationProvider>(builder: (context, provider, _) {
+      List<MapItem> items = Provider.of<MapItemsProvider>(context).items(
+        context,
+        showNews: provider.showNews,
+        showWitness: provider.showWitness,
+      );
+
+      return GoogleMap(
         mapType: MapType.none,
         initialCameraPosition: initialPosition,
         onMapCreated: (GoogleMapController controller) {
           controllerCompleter.complete(controller);
-          controller.setMapStyle(
-            '''
-              [
-                {
-                  "elementType": "labels",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "administrative",
-                  "elementType": "geometry",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "administrative.land_parcel",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "administrative.neighborhood",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "poi",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "road",
-                  "elementType": "labels.icon",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                },
-                {
-                  "featureType": "transit",
-                  "stylers": [
-                    {
-                      "visibility": "off"
-                    }
-                  ]
-                }
-              ]
-            ''',
-          );
+          controller.setMapStyle(MapConfiguration.style);
         },
-        markers: markers(provider),
-      ),
-    );
+        markers: items
+            .map(
+              (MapItem item) => Marker(
+                markerId: MarkerId(item.title),
+                position: item.coordinates,
+                icon: BitmapDescriptor.defaultMarkerWithHue(
+                  BitmapDescriptor.hueYellow,
+                ),
+                onTap: () {
+                  Provider.of<MapSelectedMarkerProvider>(context, listen: false)
+                      .selectedItem = item;
+                },
+              ),
+            )
+            .toSet(),
+      );
+    });
   }
 
   // Future<void> _goToTheLake() async {
