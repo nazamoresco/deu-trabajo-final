@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:provider/provider.dart';
 
 import '../../shared/providers/configuration_provider.dart';
@@ -31,7 +29,7 @@ class InitialScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   Text(
                     "La página se utiliza para poder ver los testimonios de la inundación en La Plata en 2013",
                     textAlign: TextAlign.center,
@@ -40,7 +38,7 @@ class InitialScreen extends StatelessWidget {
                       color: provider.textColor,
                     ),
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   Text(
                     "Cuando seleccionas un punto en el mapa se mostrará la información del testimonio en la parte izquierda de la pantalla.",
                     style: TextStyle(
@@ -48,7 +46,7 @@ class InitialScreen extends StatelessWidget {
                       color: provider.textColor,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     "Si no existe ningún testimonio para ese lugar, se mostrará un mensaje indicando que no existe ningún testimonio para ese lugar.",
                     style: TextStyle(
@@ -56,7 +54,7 @@ class InitialScreen extends StatelessWidget {
                       color: provider.textColor,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     "A la izquierda se muestran datos del momento historico.",
                     style: TextStyle(
@@ -64,7 +62,7 @@ class InitialScreen extends StatelessWidget {
                       color: provider.textColor,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   IconButton(
                     onPressed: () =>
                         Navigator.of(context).pushNamed("/principal"),

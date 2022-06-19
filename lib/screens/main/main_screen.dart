@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:deu/screens/main/widgets/map.dart';
 import 'package:deu/screens/main/widgets/map_sidebar.dart';
 import 'package:deu/screens/main/widgets/property_display_toggle.dart';

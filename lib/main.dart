@@ -10,8 +10,10 @@ import 'package:provider/provider.dart';
 import 'shared/providers/configuration_provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  RendererBinding.instance.setSemanticsEnabled(true);
+
   runApp(const MyApp());
-  RendererBinding.instance!.setSemanticsEnabled(true);
 }
 
 class MyApp extends StatelessWidget {

@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:deu/screens/main/classes/map_configuration.dart';
 import 'package:deu/shared/classes/map_item.dart';
@@ -12,11 +11,6 @@ import 'package:provider/provider.dart';
 
 class LaPlataMap extends StatelessWidget {
   final Completer<GoogleMapController> controllerCompleter = Completer();
-
-  static const CameraPosition initialPosition = CameraPosition(
-    target: LatLng(-34.920252, -57.950477),
-    zoom: 15,
-  );
 
   LaPlataMap({Key? key}) : super(key: key);
 
@@ -31,7 +25,7 @@ class LaPlataMap extends StatelessWidget {
 
       return GoogleMap(
         mapType: MapType.none,
-        initialCameraPosition: initialPosition,
+        initialCameraPosition: MapConfiguration.initialPosition,
         onMapCreated: (GoogleMapController controller) {
           controllerCompleter.complete(controller);
           controller.setMapStyle(MapConfiguration.style);
@@ -39,7 +33,7 @@ class LaPlataMap extends StatelessWidget {
         markers: items
             .map(
               (MapItem item) => Marker(
-                markerId: MarkerId(item.title),
+                markerId: MarkerId(item.link),
                 position: item.coordinates,
                 icon: BitmapDescriptor.defaultMarkerWithHue(
                   BitmapDescriptor.hueYellow,

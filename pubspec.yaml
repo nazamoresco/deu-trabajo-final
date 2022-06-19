@@ -39,6 +39,7 @@ dependencies:
   google_maps_flutter: ^2.1.7
   provider: ^6.0.3
   youtube_player_iframe: ^2.3.0
+  any_link_preview: ^2.0.8
 
 dev_dependencies:
   flutter_test:

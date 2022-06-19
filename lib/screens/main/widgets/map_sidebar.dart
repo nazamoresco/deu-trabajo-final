@@ -1,7 +1,5 @@
 import 'package:deu/screens/main/widgets/selected_marker.dart';
-import 'package:deu/screens/main/widgets/video_player.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
-import 'package:deu/shared/providers/map_selected_marker_provider.dart';
 import 'package:deu/shared/widgets/configuration.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,8 +13,7 @@ class MapSidebar extends StatelessWidget {
       builder: (context, provider, _) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 25),
-          SelectedMarker(),
+          const SelectedMarker(),
           ListTile(
             leading: const Icon(Icons.water_drop_outlined, size: 64),
             iconColor: provider.textColor,
@@ -69,8 +66,8 @@ class MapSidebar extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 16, left: 16),
+          const Padding(
+            padding: EdgeInsets.only(right: 16, left: 16),
             child: Configuration(),
           ),
           Padding(
@@ -107,7 +104,7 @@ class MapSidebar extends StatelessWidget {
     final snackBar = SnackBar(
       backgroundColor: Colors.lightBlue[50],
       padding: const EdgeInsets.all(16.0),
-      content: Container(
+      content: SizedBox(
         height: 200.0,
         child: Row(
           children: [

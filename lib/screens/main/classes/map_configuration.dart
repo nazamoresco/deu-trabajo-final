@@ -1,4 +1,13 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 class MapConfiguration {
+  static const laPlata = LatLng(-34.920252, -57.950477);
+
+  static const initialPosition = CameraPosition(
+    target: laPlata,
+    zoom: 15,
+  );
+
   static const style = '''
               [
                 {
