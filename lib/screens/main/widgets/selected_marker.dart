@@ -26,19 +26,19 @@ class SelectedMarker extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (isYoutubeLink) Video(item.link, key: UniqueKey()),
-            AnyLinkPreview(
-              key: UniqueKey(),
-              link: item.link,
-              backgroundColor: Colors.lightBlue[50],
-              placeholderWidget: Center(
-                child: CircularProgressIndicator(
-                  backgroundColor: Colors.lightBlue[200],
-                ),
-              ),
-              borderRadius: 4,
-              showMultimedia: !isYoutubeLink,
-            ),
+            isYoutubeLink
+                ? Video(item.link, key: UniqueKey())
+                : AnyLinkPreview(
+                    key: UniqueKey(),
+                    link: item.link,
+                    backgroundColor: Colors.lightBlue[50],
+                    placeholderWidget: Center(
+                      child: CircularProgressIndicator(
+                        backgroundColor: Colors.lightBlue[200],
+                      ),
+                    ),
+                    borderRadius: 4,
+                  ),
           ],
         ),
       );

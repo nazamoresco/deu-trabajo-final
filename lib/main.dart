@@ -11,7 +11,7 @@ import 'shared/providers/configuration_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  RendererBinding.instance!.setSemanticsEnabled(true);
+  RendererBinding.instance.setSemanticsEnabled(true);
 
   runApp(const MyApp());
 }

@@ -59,9 +59,9 @@ class MainScreen extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Flexible(
+              Flexible(
                 flex: 3,
-                child: SingleChildScrollView(child: MapSidebar()),
+                child: const SingleChildScrollView(child: MapSidebar()),
               ),
               Flexible(
                 flex: 8,

@@ -51,6 +51,7 @@ El sitio requiere de un push manual.
   - [ ] WCAG 2.0
   - [ ] W3C
 - [ ] Permitir incrementar el contraste en la configuracion.
+- [ ] Completar pagina principal.
 - [ ] Llenar todo de smenatica y testear con screen reader.
 - [ ] Agregar una lista con todos los markers.
 - [ ] Poner iconos personalizados dependiendo del tipo de marker
