@@ -28,7 +28,7 @@ class PropertyDisplayToggle extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(4.0),
             decoration: BoxDecoration(
-              color: enabled ? Colors.lightBlue[200] : Colors.transparent,
+              color: enabled ? Colors.lightBlue[100] : Colors.transparent,
               borderRadius:
                   const BorderRadiusDirectional.all(Radius.circular(4)),
             ),

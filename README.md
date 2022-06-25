@@ -9,7 +9,7 @@
 - [Validadores](#validadores)
 - [Como actualizar el sitio?](#como-actualizar-el-sitio)
 - [TODOs](#todos)
-- [Posibles extensiones](#posibles-extensiones)
+- [Posibles extensiones del trabajo](#posibles-extensiones-del-trabajo)
 - [Bitácora de desarrollo](#bitácora-de-desarrollo)
 
 ## Introduccion
@@ -63,7 +63,7 @@ El sitio requiere de un push manual.
 - [ ] Agregar una lista con todos los markers.
 - [ ] Poner iconos personalizados dependiendo del tipo de marker
 
-## Posibles extensiones
+## Posibles extensiones del trabajo
 
 1. Dibujar el cauce del rio Maldonado.
 2. Permitir a los usuarios agregar testimonios y/o noticias.
@@ -78,3 +78,14 @@ El sitio requiere de un push manual.
 - Se agregó un preview en el sidebar de los distintos markers.
 - Se modificó el color del texto para pasar los validadores de contraste
 - Se puso semantica a todos los botones de la aplicacion.
+
+# Conclusiones
+
+* Flutter es una gran herramienta para el desarrollo accesible
+  * Sin configuracion posee un alto puntaje de accesibilidad.
+  * Provee componentes como Semantics para la extension de la semantica de parte del desarrollador.
+  * Como desventaja, cuando no soporta algo agregarlo es una tarea ardua.
+    * Las peticiones tardan mucho tiempo en avanzar.
+    * Ejemplo, aria-level
+      * https://github.com/flutter/flutter/issues/97894
+    * En contraposicion a esta falta de control, si colaboramos a solucionar el problema esto afectara un gran numero de aplicaciones, haciendolas mas accesibles.
