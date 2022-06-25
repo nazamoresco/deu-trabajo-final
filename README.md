@@ -11,6 +11,8 @@
 - [TODOs](#todos)
 - [Posibles extensiones del trabajo](#posibles-extensiones-del-trabajo)
 - [Bitácora de desarrollo](#bitácora-de-desarrollo)
+- [Conclusiones](#conclusiones)
+- [Problemas de accesibilidad con flutter](#problemas-de-accesibilidad-con-flutter)
 
 ## Introduccion
 
@@ -79,13 +81,24 @@ El sitio requiere de un push manual.
 - Se modificó el color del texto para pasar los validadores de contraste
 - Se puso semantica a todos los botones de la aplicacion.
 
-# Conclusiones
+##  Conclusiones
 
 * Flutter es una gran herramienta para el desarrollo accesible
   * Sin configuracion posee un alto puntaje de accesibilidad.
   * Provee componentes como Semantics para la extension de la semantica de parte del desarrollador.
   * Como desventaja, cuando no soporta algo agregarlo es una tarea ardua.
     * Las peticiones tardan mucho tiempo en avanzar.
-    * Ejemplo, aria-level
-      * https://github.com/flutter/flutter/issues/97894
     * En contraposicion a esta falta de control, si colaboramos a solucionar el problema esto afectara un gran numero de aplicaciones, haciendolas mas accesibles.
+
+## Problemas de accesibilidad con flutter
+
+En el desarrollo de la aplicación hemos notado como Flutter tiene algunas fallas de accesibilidad, las listamos a continuación:
+
+1. ChromeVox no es compatible con Flutter
+   1. Esto no es tanto un problema de flutter como de la extension, que deberia soportar este elemento, aun asi es un problema para los usuarios con esta extensión que quieran acceder a aplicaciones web construidas con Flutter.
+2. Flutter no soporta el aria-level
+   1. El aria-level permite definir el nivel jerarquico semantico de un elemento en la estructura.
+   2. https://github.com/flutter/flutter/issues/97305
+3. Flutter no permite la modificacion de la propiedad `user-scalable` en la etiqueta `meta viewport`
+   1. Si bien esto es asi porque Flutter lo soporta internamente, es un problema con los validadores de accesibilidad.
+   2. https://github.com/flutter/flutter/issues/97305
