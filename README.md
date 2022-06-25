@@ -6,6 +6,7 @@
 - [Links de interes sobre accesibilidad](#links-de-interes-sobre-accesibilidad)
 - [Screen readers](#screen-readers)
 - [Contraste](#contraste)
+- [Validadores](#validadores)
 - [Como actualizar el sitio?](#como-actualizar-el-sitio)
 - [TODOs](#todos)
 - [Posibles extensiones](#posibles-extensiones)
@@ -41,6 +42,12 @@ El proyecto soporta screen readers:
 El color del texto ha sido oscurecido hasta pasar todos los tests en el validador https://webaim.org/resources/contrastchecker/.
 El texto tiene el color #01579B, mientras que el fondo tiene el color #FAFAFA.
 
+## Validadores
+
+El desarrollo del sitio fue guiado por las recomendaciones de los validadores:
+* https://validator.w3.org/
+* Google lighthouse
+
 ## Como actualizar el sitio?
 
 El sitio requiere de un push manual.
@@ -51,9 +58,6 @@ El sitio requiere de un push manual.
 
 ## TODOs
 
-- [ ] Probar con distintos validadores la accesibilidad del sitio.
-  - [ ] WCAG 2.0
-  - [ ] W3C
 - [ ] Permitir incrementar el contraste en la configuracion.
 - [ ] Completar pagina principal.
 - [ ] Agregar una lista con todos los markers.
