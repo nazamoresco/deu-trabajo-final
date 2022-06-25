@@ -22,7 +22,7 @@ class TextSizeInput extends StatelessWidget {
       builder: (context, provider, _) => Row(
         children: [
           Expanded(
-            child: Text(
+            child: SelectableText(
               "Tamaño del $label: $value",
               style: TextStyle(
                 color: provider.textColor,
@@ -30,13 +30,23 @@ class TextSizeInput extends StatelessWidget {
               ),
             ),
           ),
-          IconButton(
-            onPressed: decrease,
-            icon: Icon(Icons.text_decrease, color: provider.textColor),
+          Semantics(
+            focusable: true,
+            button: true,
+            label: "Decrementar el tamaño del $label",
+            child: IconButton(
+              onPressed: decrease,
+              icon: Icon(Icons.text_decrease, color: provider.textColor),
+            ),
           ),
-          IconButton(
-            onPressed: increase,
-            icon: Icon(Icons.text_increase, color: provider.textColor),
+          Semantics(
+            focusable: true,
+            button: true,
+            label: "Incrementar el tamaño del $label",
+            child: IconButton(
+              onPressed: increase,
+              icon: Icon(Icons.text_increase, color: provider.textColor),
+            ),
           ),
         ],
       ),

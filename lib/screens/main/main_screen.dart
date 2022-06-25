@@ -14,7 +14,7 @@ class MainScreen extends StatelessWidget {
       builder: (context, provider, _) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 70,
-          title: Text(
+          title: SelectableText(
             "Inundacion en La Plata en 2013",
             style: TextStyle(
               color: provider.textColor,
@@ -59,9 +59,9 @@ class MainScreen extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Flexible(
+              const Flexible(
                 flex: 3,
-                child: const SingleChildScrollView(child: MapSidebar()),
+                child: SingleChildScrollView(child: MapSidebar()),
               ),
               Flexible(
                 flex: 8,

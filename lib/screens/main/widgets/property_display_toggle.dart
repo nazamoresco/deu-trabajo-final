@@ -35,7 +35,7 @@ class PropertyDisplayToggle extends StatelessWidget {
             child: Column(
               children: [
                 Icon(icon, color: textColor),
-                Text(
+                SelectableText(
                   label,
                   style: TextStyle(
                     color: textColor,

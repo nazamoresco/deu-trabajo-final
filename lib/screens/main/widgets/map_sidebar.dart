@@ -17,11 +17,11 @@ class MapSidebar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.water_drop_outlined, size: 64),
             iconColor: provider.textColor,
-            title: Text(
+            title: SelectableText(
               "440mm",
               style: TextStyle(fontSize: provider.subtitleSize),
             ),
-            subtitle: Text(
+            subtitle: SelectableText(
               "Lluvia promedio: 40mm",
               style: TextStyle(fontSize: provider.textSize),
             ),
@@ -30,11 +30,11 @@ class MapSidebar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.people_alt_outlined, size: 64),
             iconColor: provider.textColor,
-            title: Text(
+            title: SelectableText(
               "89 fallecidos",
               style: TextStyle(fontSize: provider.subtitleSize),
             ),
-            subtitle: Text(
+            subtitle: SelectableText(
               "Confirmados judicialmente",
               style: TextStyle(fontSize: provider.textSize),
             ),
@@ -46,21 +46,26 @@ class MapSidebar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                SelectableText(
                   "Configuracion",
                   style: TextStyle(
                     fontSize: provider.subtitleSize,
                     color: provider.textColor,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {
-                    if (provider.helpEnabled) displayHelp(context, provider);
-                    Navigator.of(context).pushNamed("/configuracion");
-                  },
-                  icon: Icon(
-                    Icons.settings,
-                    color: provider.textColor,
+                Semantics(
+                  button: true,
+                  focusable: true,
+                  label: "Ïr a la página de configuracion",
+                  child: IconButton(
+                    onPressed: () {
+                      if (provider.helpEnabled) displayHelp(context, provider);
+                      Navigator.of(context).pushNamed("/configuracion");
+                    },
+                    icon: Icon(
+                      Icons.settings,
+                      color: provider.textColor,
+                    ),
                   ),
                 ),
               ],
@@ -76,20 +81,25 @@ class MapSidebar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "Ayuda",
+                SelectableText(
+                  "Presentacion",
                   style: TextStyle(
                     fontSize: provider.subtitleSize,
                     color: provider.textColor,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed("/initial");
-                  },
-                  icon: Icon(
-                    Icons.help,
-                    color: provider.textColor,
+                Semantics(
+                  focusable: true,
+                  button: true,
+                  label: "Ir la página de presentacion",
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed("/initial");
+                    },
+                    icon: Icon(
+                      Icons.start,
+                      color: provider.textColor,
+                    ),
                   ),
                 ),
               ],
@@ -112,7 +122,7 @@ class MapSidebar extends StatelessWidget {
               Icons.help_outline,
               color: provider.textColor,
             ),
-            Text(
+            SelectableText(
               'En esta pagina se puede configurar distintas propiedades de la aplicacion, como tamaño de fuente, contraste, etc!',
               style: TextStyle(
                 color: provider.textColor,

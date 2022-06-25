@@ -56,7 +56,6 @@ El sitio requiere de un push manual.
   - [ ] W3C
 - [ ] Permitir incrementar el contraste en la configuracion.
 - [ ] Completar pagina principal.
-- [ ] Llenar todo de smenatica y testear con screen reader.
 - [ ] Agregar una lista con todos los markers.
 - [ ] Poner iconos personalizados dependiendo del tipo de marker
 
@@ -74,3 +73,4 @@ El sitio requiere de un push manual.
 - Se incluyo una página principal educativa.
 - Se agregó un preview en el sidebar de los distintos markers.
 - Se modificó el color del texto para pasar los validadores de contraste
+- Se puso semantica a todos los botones de la aplicacion.
