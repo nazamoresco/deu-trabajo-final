@@ -102,3 +102,5 @@ En el desarrollo de la aplicación hemos notado como Flutter tiene algunas falla
 3. Flutter no permite la modificacion de la propiedad `user-scalable` en la etiqueta `meta viewport`
    1. Si bien esto es asi porque Flutter lo soporta internamente, es un problema con los validadores de accesibilidad.
    2. https://github.com/flutter/flutter/issues/97305
+4. Los markers de google_maps_web no tienen aria-labels
+   1. Se presentará un issue para que solucione, ya que no se han encontrado issues existentes.
