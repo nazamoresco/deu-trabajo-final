@@ -5,6 +5,7 @@
 - [Donde puedo ver el proyecto?](#donde-puedo-ver-el-proyecto)
 - [Links de interes sobre accesibilidad](#links-de-interes-sobre-accesibilidad)
 - [Screen readers](#screen-readers)
+- [Contraste](#contraste)
 - [Como actualizar el sitio?](#como-actualizar-el-sitio)
 - [TODOs](#todos)
 - [Posibles extensiones](#posibles-extensiones)
@@ -35,6 +36,11 @@ El proyecto soporta screen readers:
 - [ ] Chrome vox
    - Flutter utiliza el elemento `shadow-root` para su renderizacion web y ChromeVox aun no lo soporta.
 
+## Contraste
+
+El color del texto ha sido oscurecido hasta pasar todos los tests en el validador https://webaim.org/resources/contrastchecker/.
+El texto tiene el color #01579B, mientras que el fondo tiene el color #FAFAFA.
+
 ## Como actualizar el sitio?
 
 El sitio requiere de un push manual.
@@ -45,8 +51,6 @@ El sitio requiere de un push manual.
 
 ## TODOs
 
-- [ ] Empezar informe parte 3B.
-- [ ] Validar contrastes de color.
 - [ ] Probar con distintos validadores la accesibilidad del sitio.
   - [ ] WCAG 2.0
   - [ ] W3C
@@ -69,3 +73,4 @@ El sitio requiere de un push manual.
 - Se includo una configuracion en el sidebar y en un página aparte.
 - Se incluyo una página principal educativa.
 - Se agregó un preview en el sidebar de los distintos markers.
+- Se modificó el color del texto para pasar los validadores de contraste

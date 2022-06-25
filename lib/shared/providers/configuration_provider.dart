@@ -5,7 +5,7 @@ class ConfigurationProvider extends ChangeNotifier {
   double subtitleSize = 24.0;
   double titleSize = 32.0;
 
-  final Color textColor = Colors.lightBlue[400]!;
+  final Color textColor = Colors.lightBlue[900]!;
 
   bool helpEnabled = true;
 
