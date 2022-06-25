@@ -1,25 +1,40 @@
-# Donde ver el proyecto?
+## Indice
 
-El proyecto se encuentra disponible en:
+- [Indice](#indice)
+- [Introduccion](#introduccion)
+- [Donde puedo ver el proyecto?](#donde-puedo-ver-el-proyecto)
+- [Links de interes sobre accesibilidad](#links-de-interes-sobre-accesibilidad)
+- [Screen readers](#screen-readers)
+- [Como actualizar el sitio?](#como-actualizar-el-sitio)
+- [TODOs](#todos)
+- [Posibles extensiones](#posibles-extensiones)
+- [Bitácora de desarrollo](#bitácora-de-desarrollo)
 
-https://nazamoresco.github.io/deu-trabajo-integrador/
+## Introduccion
 
-Se puede correr localmente tambien.
+Este trabajo forma parte de la materia Diseño de experiencia de usuario y consiste en un mapa de testimonios y noticias sobre la inundacion ocurrida en La Plata en el año 2013.
 
-Si contamos con flutter en nuestra maquina: `flutter run -d chrome --web-renderer html`
+## Donde puedo ver el proyecto?
 
-# Links de interes sobre accesibilidad
+* El proyecto se encuentra disponible en:
+  * https://nazamoresco.github.io/deu-trabajo-integrador/
+* Se puede correr localmente con flutter instalado:
+  * `flutter run -d chrome --web-renderer html`
+
+## Links de interes sobre accesibilidad
 
 * Semantics widget: https://api.flutter.dev/flutter/widgets/Semantics-class.html
 * Web renderers: https://docs.flutter.dev/development/platform-integration/web/renderers
 * Doc de accesibilidad: https://docs.flutter.dev/development/accessibility-and-localization/accessibility
 
-# Screen readers
+## Screen readers
 
-El proyecto soporta screen reades:
-[ x ] JAWS
+El proyecto soporta screen readers:
 
-# Desarolladores
+- [x] JAWS
+- [ ] Chrome vox
+   - Flutter utiliza el elemento `shadow-root` para su renderizacion web y ChromeVox aun no lo soporta.
+
 ## Como actualizar el sitio?
 
 El sitio requiere de un push manual.
@@ -28,12 +43,28 @@ El sitio requiere de un push manual.
 2. Pushear el resultado a `deu-trabajo-integrador`.
 3. Github pages se encagará de actualizar el sitio.
 
-##  TODO
+## TODOs
 
-1. Agregar un welcome screen : FB
-   1. Falta una pantalla con titulo/nombre de la aplicacion y una explicacion para que sirve.
-2. Chequear contraste de colores de texto : FR
-3. Permitir que los usuarios agreguen testimonios?
-4. Agregar configuracion para el contraste
-5. Revisar los puntos del TP3
+- [ ] Empezar informe parte 3B.
+- [ ] Validar contrastes de color.
+- [ ] Probar con distintos validadores la accesibilidad del sitio.
+  - [ ] WCAG 2.0
+  - [ ] W3C
+- [ ] Permitir incrementar el contraste en la configuracion.
+- [ ] Llenar todo de smenatica y testear con screen reader.
+- [ ] Agregar una lista con todos los markers.
+- [ ] Poner iconos personalizados dependiendo del tipo de marker
 
+## Posibles extensiones
+
+1. Dibujar el cauce del rio Maldonado.
+2. Permitir a los usuarios agregar testimonios y/o noticias.
+
+## Bitácora de desarrollo
+- Se agrego la pagina principal, un sidebar.
+- Se agregaron testimonios al mapa y noticias.
+- Se agrego la habilidad de filtrar los distintos tipos de markers.
+- Se incluyo informacion general al sidebar.
+- Se includo una configuracion en el sidebar y en un página aparte.
+- Se incluyo una página principal educativa.
+- Se agregó un preview en el sidebar de los distintos markers.
