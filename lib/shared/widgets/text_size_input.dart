@@ -22,7 +22,7 @@ class TextSizeInput extends StatelessWidget {
       builder: (context, provider, _) => Row(
         children: [
           Expanded(
-            child: SelectableText(
+            child: Text(
               "Tamaño del $label: $value",
               style: TextStyle(
                 color: provider.textColor,

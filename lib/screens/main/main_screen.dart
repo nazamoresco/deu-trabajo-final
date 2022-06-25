@@ -14,7 +14,7 @@ class MainScreen extends StatelessWidget {
       builder: (context, provider, _) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 70,
-          title: SelectableText(
+          title: Text(
             "Inundacion en La Plata en 2013",
             style: TextStyle(
               color: provider.textColor,

@@ -11,7 +11,7 @@ class ConfigurationScreen extends StatelessWidget {
     return Consumer<ConfigurationProvider>(
       builder: (context, provider, _) => Scaffold(
         appBar: AppBar(
-          title: SelectableText(
+          title: Text(
             "Configuracion",
             style: TextStyle(
               color: provider.textColor,

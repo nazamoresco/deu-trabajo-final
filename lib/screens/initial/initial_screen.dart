@@ -14,7 +14,7 @@ class InitialScreen extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 70,
           centerTitle: true,
-          title: SelectableText(
+          title: Text(
             "Inundaciones La plata - Mapa de Testimonios",
             style: TextStyle(
               color: provider.textColor,
@@ -30,7 +30,7 @@ class InitialScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 25),
-                  SelectableText(
+                  Text(
                     "La página se utiliza para poder ver los testimonios de la inundación en La Plata en 2013",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -39,7 +39,7 @@ class InitialScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 25),
-                  SelectableText(
+                  Text(
                     "Cuando seleccionas un punto en el mapa se mostrará la información del testimonio en la parte izquierda de la pantalla.",
                     style: TextStyle(
                       fontSize: provider.textSize,
@@ -47,7 +47,7 @@ class InitialScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SelectableText(
+                  Text(
                     "Si no existe ningún testimonio para ese lugar, se mostrará un mensaje indicando que no existe ningún testimonio para ese lugar.",
                     style: TextStyle(
                       fontSize: provider.textSize,
@@ -55,7 +55,7 @@ class InitialScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  SelectableText(
+                  Text(
                     "A la izquierda se muestran datos del momento historico.",
                     style: TextStyle(
                       fontSize: provider.textSize,
