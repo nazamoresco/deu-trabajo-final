@@ -26,7 +26,7 @@ class SelectedMarker extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (isYoutubeLink) Video(key: UniqueKey(), item.link),
+            if (isYoutubeLink) Video(item.link, key: UniqueKey()),
             AnyLinkPreview(
               key: UniqueKey(),
               link: item.link,
