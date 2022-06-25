@@ -5,10 +5,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class MapItemsProvider with ChangeNotifier {
   final List<MapItem> newsMarkers = [
     MapItem(
-      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      coordinates: const LatLng(-34.920252, -57.950477),
-    ),
-    MapItem(
       link:
           "https://www.lanacion.com.ar/buenos-aires/el-guardavidas-que-se-convirtio-en-heroe-durante-las-inundaciones-en-la-plata-nid1677770/",
       coordinates: const LatLng(-34.89813091711765, -57.972029805673664),
