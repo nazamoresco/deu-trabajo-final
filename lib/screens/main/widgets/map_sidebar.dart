@@ -22,7 +22,7 @@ class MapSidebar extends StatelessWidget {
               style: TextStyle(fontSize: provider.subtitleSize),
             ),
             subtitle: Text(
-              "Lluvia promedio: 40mm",
+              "Lluvia promedio mensual: 111ms~",
               style: TextStyle(fontSize: provider.textSize),
             ),
             textColor: provider.textColor,
@@ -88,18 +88,14 @@ class MapSidebar extends StatelessWidget {
                     color: provider.textColor,
                   ),
                 ),
-                Semantics(
-                  focusable: true,
-                  button: true,
-                  label: "Ir la página de presentacion",
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed("/initial");
-                    },
-                    icon: Icon(
-                      Icons.start,
-                      color: provider.textColor,
-                    ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("/initial");
+                  },
+                  icon: Icon(
+                    Icons.start,
+                    color: provider.textColor,
+                    semanticLabel: "Ir la página de presentacion",
                   ),
                 ),
               ],

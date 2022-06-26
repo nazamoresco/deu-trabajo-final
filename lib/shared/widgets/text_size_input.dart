@@ -30,22 +30,20 @@ class TextSizeInput extends StatelessWidget {
               ),
             ),
           ),
-          Semantics(
-            focusable: true,
-            button: true,
-            label: "Decrementar el tamaño del $label",
-            child: IconButton(
-              onPressed: decrease,
-              icon: Icon(Icons.text_decrease, color: provider.textColor),
+          IconButton(
+            onPressed: decrease,
+            icon: Icon(
+              Icons.text_decrease,
+              color: provider.textColor,
+              semanticLabel: "Decrementar el tamaño del $label",
             ),
           ),
-          Semantics(
-            focusable: true,
-            button: true,
-            label: "Incrementar el tamaño del $label",
-            child: IconButton(
-              onPressed: increase,
-              icon: Icon(Icons.text_increase, color: provider.textColor),
+          IconButton(
+            onPressed: increase,
+            icon: Icon(
+              Icons.text_increase,
+              color: provider.textColor,
+              semanticLabel: "Incrementar el tamaño del $label",
             ),
           ),
         ],
