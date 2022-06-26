@@ -34,6 +34,7 @@ Este trabajo forma parte de la materia Diseño de experiencia de usuario y consi
 El proyecto soporta screen readers:
 
 - [x] JAWS
+- [x] NVDA
 - [ ] Chrome vox
    - Flutter utiliza el elemento `shadow-root` para su renderizacion web y ChromeVox aun no lo soporta.
 

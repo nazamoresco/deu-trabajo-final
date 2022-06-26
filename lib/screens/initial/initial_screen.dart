@@ -31,7 +31,7 @@ class InitialScreen extends StatelessWidget {
                 children: [
                   const SizedBox(height: 25),
                   Text(
-                    "La página se utiliza para poder ver los testimonios de la inundación en La Plata en 2013",
+                    "La página se utiliza para poder ver los testimonios y noticias sobre la inundación en La Plata en 2013",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: provider.subtitleSize,
@@ -40,7 +40,25 @@ class InitialScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 25),
                   Text(
-                    "Cuando seleccionas un punto en el mapa se mostrará la información del testimonio en la parte izquierda de la pantalla.",
+                    "En el sitio se muestra un mapa y unos botones de configuración general. Además, datos generales con respecto a la inundación.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: provider.subtitleSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 25),
+                  Text(
+                    "Instrucciones para el uso del sitio web.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: provider.subtitleSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "- En el mapa se muestran unos marcadores en diferentes ubicaciones, estas ubicaciones representan el lugar donde ocurrió algun suceso contado en algún testimonio.",
                     style: TextStyle(
                       fontSize: provider.textSize,
                       color: provider.textColor,
@@ -48,7 +66,7 @@ class InitialScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    "Si no existe ningún testimonio para ese lugar, se mostrará un mensaje indicando que no existe ningún testimonio para ese lugar.",
+                    "- Cuando se seleccione algún punto en el mapa se mostrará la información del testimonio en la parte izquierda de la pantalla.",
                     style: TextStyle(
                       fontSize: provider.textSize,
                       color: provider.textColor,
@@ -56,7 +74,31 @@ class InitialScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    "A la izquierda se muestran datos del momento historico.",
+                    "- Si no existe ningún testimonio para ese lugar, se mostrará un mensaje indicando que no existe ningún testimonio para ese lugar.",
+                    style: TextStyle(
+                      fontSize: provider.textSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "- Los puntos en el mapa estan categorizados como 'Testigos' y 'Noticias'.",
+                    style: TextStyle(
+                      fontSize: provider.textSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "- Para poder ver todos los tipos, o uno en específico se puede filtrar lo que se muestra en el mapa con los botones que se encuentran \nen la parte superior derecha de la pantalla.",
+                    style: TextStyle(
+                      fontSize: provider.textSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    "- Si se desea incrementar el tamaño del texto de la página se puede hacer desde la configuración. A la izquierda de la pantalla se muestran unos botones \npara incrementar el tamaño del texto en general, de los subtítulos, o de los títulos.",
                     style: TextStyle(
                       fontSize: provider.textSize,
                       color: provider.textColor,
