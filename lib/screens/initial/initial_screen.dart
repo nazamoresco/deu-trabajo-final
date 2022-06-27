@@ -105,6 +105,14 @@ class InitialScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
+                  Text(
+                    "- Para tener otra alternativa a los puntos del mapa, las noticias y los testimonios tambien se muestran en el sidebar izquierdo de la pantalla.",
+                    style: TextStyle(
+                      fontSize: provider.textSize,
+                      color: provider.textColor,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
                   Semantics(
                     focusable: true,
                     button: true,
