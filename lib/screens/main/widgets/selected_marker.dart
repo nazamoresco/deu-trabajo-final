@@ -1,4 +1,5 @@
 import 'package:any_link_preview/any_link_preview.dart';
+import 'package:deu/screens/main/widgets/map_item_preview.dart';
 import 'package:deu/screens/main/widgets/video_player.dart';
 import 'package:deu/shared/classes/map_item.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
@@ -18,30 +19,7 @@ class SelectedMarker extends StatelessWidget {
         return Container();
       }
 
-      bool isYoutubeLink = RegExp(r"youtube").hasMatch(item.link);
-
-      return Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            isYoutubeLink
-                ? Video(item.link, key: UniqueKey())
-                : AnyLinkPreview(
-                    key: UniqueKey(),
-                    link: item.link,
-                    backgroundColor: Colors.lightBlue[50],
-                    placeholderWidget: Center(
-                      child: CircularProgressIndicator(
-                        backgroundColor: Colors.lightBlue[200],
-                      ),
-                    ),
-                    borderRadius: 4,
-                  ),
-          ],
-        ),
-      );
+      return MapItemPreview(item);
     });
   }
 }
