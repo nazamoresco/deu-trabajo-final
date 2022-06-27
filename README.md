@@ -62,9 +62,8 @@ El sitio requiere de un push manual.
 ## TODOs
 
 - [ ] Permitir incrementar el contraste en la configuración.
-- [ ] Completar página principal.
-- [ ] Agregar una lista con todos los markers.
-- [ ] Poner iconos personalizados dependiendo del tipo de marker
+- [ ] Poner icronos personalizados dependiendo del tipo de marker
+- [ ] Agregar aria-label a los videos de youtube
 
 ## Posibles extensiones
 
@@ -82,6 +81,8 @@ El sitio requiere de un push manual.
 - Se modifica el color del texto para pasar los validadores de contraste
 - Se puso semántica a todos los botones de la aplicación.
 - Se encontró la causa a todos los problemas de accesibilidad actuales.
+- Se extendió la página principal.
+- Se listó los sitios de interes del mapa en el sidebar.
 
 ##  Conclusiones
 

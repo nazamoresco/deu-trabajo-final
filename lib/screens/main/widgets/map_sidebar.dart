@@ -1,4 +1,6 @@
+import 'package:deu/screens/main/widgets/news_list.dart';
 import 'package:deu/screens/main/widgets/selected_marker.dart';
+import 'package:deu/screens/main/widgets/witness_list.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
 import 'package:deu/shared/widgets/configuration.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +102,17 @@ class MapSidebar extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          if (provider.showNews)
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: NewsList(),
+            ),
+          if(provider.showWitness)
+                      const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: WitenessList(),
+            ),
         ],
       ),
     );
