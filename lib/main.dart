@@ -37,6 +37,9 @@ class MyApp extends StatelessWidget {
             appBarTheme: AppBarTheme(
               backgroundColor: Colors.lightBlue[50],
             ),
+            iconTheme: IconThemeData(
+              color: Colors.lightBlue[900],
+            ),
           ),
           initialRoute: "/initial",
           routes: {
