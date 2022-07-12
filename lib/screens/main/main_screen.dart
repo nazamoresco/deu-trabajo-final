@@ -56,19 +56,32 @@ class MainScreen extends StatelessWidget {
         ),
         body: Container(
           color: Colors.lightBlue[100],
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Flexible(
-                flex: 3,
-                child: SingleChildScrollView(child: MapSidebar()),
-              ),
-              Flexible(
-                flex: 8,
-                child: LaPlataMap(),
-              ),
-            ],
-          ),
+          child: MediaQuery.of(context).size.width > 1000
+              ? Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Flexible(
+                      flex: 3,
+                      child: SingleChildScrollView(child: MapSidebar()),
+                    ),
+                    Flexible(
+                      flex: 8,
+                      child: LaPlataMap(),
+                    ),
+                  ],
+                )
+              : Column(
+                  children: [
+                    Flexible(
+                      flex: 5,
+                      child: LaPlataMap(),
+                    ),
+                    const Flexible(
+                      flex: 5,
+                      child: SingleChildScrollView(child: MapSidebar()),
+                    ),
+                  ],
+                ),
         ),
       ),
     );
