@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             appBarTheme: AppBarTheme(
               backgroundColor: Colors.lightBlue[50],
+              foregroundColor: provider.textColor,
             ),
             iconTheme: IconThemeData(
               color: Colors.lightBlue[900],
