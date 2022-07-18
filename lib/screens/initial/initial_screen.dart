@@ -86,6 +86,7 @@ class InitialScreen extends StatelessWidget {
                       ),
                       MapItemPreview(
                         MapItem(
+                          type: MapItemType.news,
                           link:
                               "https://www.lanacion.com.ar/buenos-aires/el-guardavidas-que-se-convirtio-en-heroe-durante-las-inundaciones-en-la-plata-nid1677770/",
                           coordinates: const LatLng(
