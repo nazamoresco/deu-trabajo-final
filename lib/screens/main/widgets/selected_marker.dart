@@ -19,7 +19,19 @@ class SelectedMarker extends StatelessWidget {
         return Container();
       }
 
-      return MapItemPreview(item);
+      return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+          padding: const EdgeInsets.only(right: 16, left: 16, top: 16),
+          child: Text(
+            "Punto seleccionado",
+            style: TextStyle(
+              fontSize: configurationProvider.subtitleSize,
+              color: configurationProvider.textColor,
+            ),
+          ),
+        ),
+        MapItemPreview(item),
+      ]);
     });
   }
 }

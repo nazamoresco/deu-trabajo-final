@@ -3,7 +3,6 @@ import 'dart:typed_data';
 
 import 'package:deu/screens/main/classes/map_configuration.dart';
 import 'package:deu/shared/classes/map_item.dart';
-import 'package:deu/shared/classes/marker_icon_loader.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
 import 'package:deu/shared/providers/custom_marker_icons.dart';
 import 'package:deu/shared/providers/map_selected_marker_provider.dart';

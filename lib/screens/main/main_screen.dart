@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
               child: PropertyDisplayToggle(
                 onPressed: provider.toggleWitnesses,
                 icon: Icons.campaign_outlined,
-                label: "Testigos",
+                label: "Testimonios",
                 textColor: Colors.blue[800]!,
                 enabled: provider.showWitness,
               ),

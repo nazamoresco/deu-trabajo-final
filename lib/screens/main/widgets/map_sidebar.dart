@@ -16,6 +16,16 @@ class MapSidebar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SelectedMarker(),
+          Padding(
+            padding: const EdgeInsets.only(right: 16, left: 16, top: 16),
+            child: Text(
+              "Datos estadísticos",
+              style: TextStyle(
+                fontSize: provider.subtitleSize,
+                color: provider.textColor,
+              ),
+            ),
+          ),
           ListTile(
             leading: const Icon(Icons.water_drop_outlined, size: 64),
             iconColor: provider.textColor,
@@ -108,8 +118,8 @@ class MapSidebar extends StatelessWidget {
               padding: EdgeInsets.all(16.0),
               child: NewsList(),
             ),
-          if(provider.showWitness)
-                      const Padding(
+          if (provider.showWitness)
+            const Padding(
               padding: EdgeInsets.all(16.0),
               child: WitenessList(),
             ),
