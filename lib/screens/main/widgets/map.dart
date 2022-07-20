@@ -36,7 +36,7 @@ class LaPlataMap extends StatelessWidget {
               controllerCompleter.complete(controller);
               controller.setMapStyle(MapConfiguration.style);
             },
-            polylines: maldonadosPolylines().toSet(),
+            polylines: provider.showCauces ? maldonadosPolylines().toSet() : {},
             markers: items
                 .map(
                   (MapItem item) => Marker(

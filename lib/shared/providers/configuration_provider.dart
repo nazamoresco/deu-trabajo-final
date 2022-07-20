@@ -9,9 +9,9 @@ class ConfigurationProvider extends ChangeNotifier {
 
   bool helpEnabled = true;
 
+  bool showCauces = true;
   bool showWitness = true;
   bool showNews = true;
-
 
   void decreaseTextSize() {
     textSize -= 1;
@@ -40,6 +40,11 @@ class ConfigurationProvider extends ChangeNotifier {
 
   void increaseTitleSize() {
     titleSize += 1;
+    notifyListeners();
+  }
+
+  void toogleCauces() {
+    showCauces = !showCauces;
     notifyListeners();
   }
 

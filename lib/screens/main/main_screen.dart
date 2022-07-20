@@ -25,11 +25,11 @@ class MainScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: PropertyDisplayToggle(
-                onPressed: () {},
+                onPressed: provider.toogleCauces,
                 icon: Icons.waves_outlined,
-                label: "Cauces",
+                label: "Cauce",
                 textColor: Colors.red,
-                enabled: false,
+                enabled: provider.showCauces,
               ),
             ),
             Padding(
