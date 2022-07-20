@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'dart:typed_data';
 
 import 'package:deu/screens/main/classes/map_configuration.dart';
+import 'package:deu/screens/main/widgets/polilynes.dart';
 import 'package:deu/shared/classes/map_item.dart';
 import 'package:deu/shared/providers/configuration_provider.dart';
 import 'package:deu/shared/providers/custom_marker_icons.dart';
@@ -36,6 +36,7 @@ class LaPlataMap extends StatelessWidget {
               controllerCompleter.complete(controller);
               controller.setMapStyle(MapConfiguration.style);
             },
+            polylines: maldonadosPolylines().toSet(),
             markers: items
                 .map(
                   (MapItem item) => Marker(
