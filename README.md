@@ -2,6 +2,7 @@
 
 - [Índice](#índice)
 - [Introducción](#introducción)
+- [Docker](#docker)
 - [¿Dónde puedo ver el proyecto?](#dónde-puedo-ver-el-proyecto)
 - [Links de interés sobre accesibilidad](#links-de-interés-sobre-accesibilidad)
 - [Screen readers](#screen-readers)
@@ -17,6 +18,12 @@
 ## Introducción
 
 Este trabajo forma parte de la materia Diseño de experiencia de usuario y consiste en un mapa de testimonios y noticias sobre la inundación ocurrida en La Plata en el año 2013.
+
+## Docker
+
+Build: `docker build -t mapa-testimonios .`
+
+Run: `docker run -d -p 8080:80 --name mapa-testimonios mapa-testimonios`
 
 ## ¿Dónde puedo ver el proyecto?
 
